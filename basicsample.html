@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic DOM Manipulation</title>
+	<style>
+        #color-box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="greeting">Hello, World!</h1>
+    <button id="change-text-btn">Change Text</button>
+	
+	<div id="color-box"></div>
+    <button id="change-color-btn">Change Color</button>
+
+    <script type="text/javascript">
+        const greeting = document.getElementById('greeting');
+        const button = document.getElementById('change-text-btn');
+        button.addEventListener('click', () => {
+            greeting.textContent = 'Hello, Kenz!';
+            greeting.style.color = 'blue';
+        });
+        const colorBox = document.getElementById('color-box');
+        
+        button = document.getElementById('change-color-btn');
+        const colors = ['lightblue', 'lightgreen', 'lightcoral', 'lightgoldenrodyellow', 'lightpink'];
+        
+        button.addEventListener('click', () => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            colorBox.style.backgroundColor = randomColor;
+        });
+    </script>
+
+</body>
+</html>
+
+
