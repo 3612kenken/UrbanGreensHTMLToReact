@@ -32,6 +32,11 @@ export default function Nav() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/UserMaintenance">
+                Users Maintenance
+              </Link>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="orders.html">
                 My Orders
               </a>
@@ -42,9 +47,9 @@ export default function Nav() {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="login.html">
+              <Link className="nav-link" to="/login">
                 Log In
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

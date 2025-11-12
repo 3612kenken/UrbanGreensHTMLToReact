@@ -1,0 +1,19 @@
+const express = require('express');
+const router = express.Router();
+const {
+  createUser,
+  getAllUsers,
+  getUserById,
+  updateUser,
+  deleteUser,
+  loginUser
+} = require('../API/apiUsers');
+
+router.post('/users', createUser);
+router.get('/users', getAllUsers);
+router.get('/users/:id', getUserById);
+router.put('/users/:id', updateUser);
+router.delete('/users/:id', deleteUser);
+router.post('/users/login', loginUser);
+
+module.exports = router;
