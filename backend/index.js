@@ -21,6 +21,7 @@ const productRoutes = require('./Routes/routesProductMaintenance');
 app.use('/api', productRoutes);
 
 const userRoutes = require('./Routes/routesUsers');
+
 app.use('/api', userRoutes);
 
 // Start Server
